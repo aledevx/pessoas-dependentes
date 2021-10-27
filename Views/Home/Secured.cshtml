@@ -1,0 +1,11 @@
+@{
+}
+
+<h1>This is Top Secret</h1>
+<h2>Welcome @User.Identity.Name</h2>
+<ul>
+    @foreach (var atributo in User.Claims)
+    {
+        <li>@atributo.Type: @atributo.Value</li>
+    }
+</ul>
